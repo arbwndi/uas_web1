@@ -110,15 +110,6 @@ if (isset($_POST['simpan'])) {
             </select>
         </div>
 
-        <div class="form-group">
-            <label>Harga</label>
-            <input type="number" name="harga" required>
-        </div>
-
-        <div class="form-group">
-            <label>Stok</label>
-            <input type="number" name="stok" required>
-        </div>
 
 
         <button type="submit" name="simpan" class="btn btn-tambah">Simpan</button>
