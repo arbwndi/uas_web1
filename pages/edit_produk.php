@@ -13,7 +13,7 @@ if (isset($_POST['update'])) {
             harga='$_POST[harga]',
             stok='$_POST[stok]',
             satuan='$_POST[satuan]'
-        WHERE id_barang='$id'
+        WHERE id='$id'
     ");
 
     header("Location: dashboard.php?page=listproducts");
@@ -21,7 +21,7 @@ if (isset($_POST['update'])) {
 
 /* AMBIL DATA */
 $data = mysqli_fetch_assoc(
-    mysqli_query($conn, "SELECT * FROM barang WHERE id_barang='$id'")
+    mysqli_query($conn, "SELECT * FROM barang WHERE id='$id'")
 );
 ?>
 
