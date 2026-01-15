@@ -46,16 +46,17 @@ background: #f8f8f8;
 </style>
 <div class="card">
 <div class="card-header">
-<h3>List Produk</h3>
-<a href="dashboard.php?page=tambah-product" class="btn btn-tambah">+ Tambah Produk</a>
+<h3>List pelanggan</h3>
+<a href="dashboard.php?page=tambah-customer" class="btn btn-tambah">+ Tambah pelanggan</a>
 </div>
 <table>
 <tr>
 <th>No</th>
-<th>Nama</th>
-<th>Alamat</th>
-<th>Negara</th>
-<th>Email</th>
+<th>kode</th>
+<th>nama</th>
+<th>alamat</th>
+<th>no hp</th>
+<th>email</th>
 <th>Aksi</th>
 </tr>
 <?php
@@ -64,7 +65,6 @@ while ($row = mysqli_fetch_assoc($data)) {
 ?>
 <tr>
 <td><?= $no++; ?></td>
-<td><?= $row['id_pelanggan']; ?></td>
 <td><?= $row['kode_pelanggan']; ?></td>
 <td><?= $row['nama_pelanggan']; ?></td>
 <td><?= $row['alamat']; ?></td>
@@ -74,7 +74,7 @@ while ($row = mysqli_fetch_assoc($data)) {
 <td>
 <a href="dashboard.php?page=edit-pelanggan&id=<?= $row['id_pelanggan']; ?>" class="
 btn btn-edit">Edit</a>
-<a href="dashboard.php?page=hapus-pelanggan&id=<?= $row['id_pelanggab']; ?>"
+<a href="dashboard.php?page=hapus-pelanggan&id=<?= $row['id_pelanggan']; ?>"
 class="btn btn-hapus"
 onclick="return confirm('Yakin hapus data?')">
 Hapus

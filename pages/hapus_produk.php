@@ -3,7 +3,7 @@ include 'koneksi.php';
 
 $id = $_GET['id'];
 
-mysqli_query($conn, "DELETE FROM barang WHERE id_barang='$id'");
+mysqli_query($conn, "DELETE FROM barang WHERE id='$id'");
 
 header("Location: dashboard.php?page=listproducts");
 ?>
